@@ -27,8 +27,8 @@ except Exception:
     pass
 
 # ───────── 설정 ─────────
-ALERT_HOOK = (os.getenv("DISCORD_WEBHOOK_URL") or "").strip()        # 중요 알림
-LOG_HOOK = (os.getenv("DISCORD_LOG_WEBHOOK_URL") or "").strip()      # 상태/로그 (선택)
+ALERT_HOOK = (os.getenv("https://discord.com/api/webhooks/1563161713291829250/HLmnu77Y2sjNy9f54lnFGIiUJvD_WN-p0eA8L0oUE_l3eivvltn3Z-W2osPIWd1ZzDbu") or "").strip()        # 중요 알림
+LOG_HOOK = (os.getenv("https://discord.com/api/webhooks/1563161838605312082/6L8tlKVSrsoBWXgZCYA74vWxNoK0BEJfUUFvBVJFoabeTUbX0Van1OwOQxntCkLqmy7S") or "").strip()      # 상태/로그 (선택)
 WORKER = (os.getenv("WORKER") or "").strip().lower()
 TAG = f"[{WORKER.upper()}] " if WORKER else ""
 ROSTER = [w for w in re.split(r"[,\s]+", (os.getenv("ROSTER") or "").lower()) if w]
